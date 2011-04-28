@@ -1,0 +1,16 @@
+This is a skeleton project for a Readability webapp using the Django framework.  It is quite basic and leaves a lot of work to do for whoever uses this.
+
+The app works like this:
+* User goes to example.com/login and is taken to Readability's site to authorize or deny the webapp's acces.
+* After the user authorizes the webapp, the user is sent to the callback URL where an account is created in a database
+* A user profile is created for the user, and the JSON for the last five bookmarks is inserted into the profile
+* The user is redirected to example.com/profile/username and the JSON for the last five bookmarks is displayed.
+
+To get the app running, one must:
+* Update the callback url, secret, and key in readability.py
+* Update database config in settings.py
+* Update static media config  in settings.py
+* Create other views (such as the index view)
+
+Other notes:
+* You probably would not want the fetching of Readability data to be a blocking call as is shown in this app.  You might use an asynchronous task queue like Celery instead (http://ask.github.com/celery/getting-started/introduction.html).

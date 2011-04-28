@@ -1,5 +1,7 @@
 This is a skeleton project for a Readability webapp using the Django framework.  It is quite basic and leaves a lot left to do.
 
+Thank you to the many people who put useful snippets of Django/OAuth code online. I will soon try to put some links in here to the snippets and blog posts that helped the most.
+
 The app works like this:
 * User goes to example.com/login and is taken to Readability's site to authorize or deny the webapp's access.
 * After the webapp has been authorized, the user is sent to the callback URL where an account for that user is created in the database.
